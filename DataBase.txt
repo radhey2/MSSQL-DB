@@ -34,3 +34,20 @@ mysql> DESCRIBE employee_payroll;
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.47 sec)
+
+mysql> INSERT INTO employee_payroll (name, salary, start) VALUES
+    -> ('Bill' , 1000000.0, '2018-01-03'),
+    -> ('Terisa',2000000.0, '2019-11-13'),
+    -> ('Charlie',3000000.0, '2020-05-21');
+Query OK, 3 rows affected (0.55 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM employee_payroll;
++----+---------+---------+------------+
+| id | name    | salary  | start      |
++----+---------+---------+------------+
+|  1 | Bill    | 1000000 | 2018-01-03 |
+|  2 | Terisa  | 2000000 | 2019-11-13 |
+|  3 | Charlie | 3000000 | 2020-05-21 |
++----+---------+---------+------------+
+3 rows in set (0.03 sec)
